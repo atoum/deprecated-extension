@@ -1,4 +1,4 @@
-# atoum/deprecated-extension
+# atoum/deprecated-extension [![Build Status](https://travis-ci.org/atoum/deprecated-extension.svg?branch=master)](https://travis-ci.org/atoum/deprecated-extension)
 
 This extension allows you to avoid having `E_USER_DEPRECATED` errors treated errors, and display the list of deprecated calls at the end of the tests.
 
