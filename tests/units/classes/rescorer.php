@@ -51,21 +51,16 @@ class rescorer extends atoum\test
 		$this
 			->given($testedClass = new testedClass)
 				->and($score)
-			->if($testedClass->rescore($score))
+			->if($errors = $testedClass->rescore($score))
 			->then
 				->array($score->getErrors())
 					->isEmpty()
 				->array($score->getFailAssertions())
 					->hasSize(1)
-				->array($score->getOutputs())
+				->array($testedClass->getErrors())
 					->hasSize(1)
 					->array[0]
-						->isEquaLTo(array(
-							'class' => 'titi\tests\units\foo',
-							'method' => 'testBar',
-							'value' => 'Deprecated since 2.0. use ->bar instead',
-						))
-
+						->isEquaLTo($error)
 		;
 	}
 }

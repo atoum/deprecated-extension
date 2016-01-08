@@ -4,6 +4,9 @@ namespace mageekguy\atoum\deprecated;
 
 class rescorer
 {
+
+	protected $errors = array();
+
 	/**
 	 * @param \mageekguy\atoum\test\score $score
 	 *
@@ -17,9 +20,15 @@ class rescorer
 			}
 			$score->deleteError($key);
 
-			$score->addOutput($error['file'], $error['class'], $error['method'], $error["message"]);
+			$this->errors[] = $error;
 		}
+	}
 
-		return $score;
+	/**
+	 * @return array
+	 */
+	public function getErrors()
+	{
+		return $this->errors;
 	}
 }

@@ -9,8 +9,14 @@ use mageekguy\atoum\test;
 
 class extension implements atoum\extension
 {
+	/**
+	 * @var rescorer
+	 */
 	protected $rescorer;
 
+	/**
+	 * @param atoum\configurator|null $configurator
+	 */
 	public function __construct(atoum\configurator $configurator = null)
 	{
 		if ($configurator)
@@ -30,6 +36,11 @@ class extension implements atoum\extension
 		$this->rescorer = new rescorer();
 	}
 
+	/**
+	 * @param runner $runner
+	 *
+	 * @return $this
+	 */
 	public function setRunner(runner $runner)
 	{
 		return $this;
@@ -54,5 +65,12 @@ class extension implements atoum\extension
 		if ($event == atoum\test::beforeTearDown && $observable instanceof \mageekguy\atoum\test) {
 			$this->rescorer->rescore($observable->getScore());
 		}
+
+		if ($event == atoum\runner::runStart && $observable instanceof \mageekguy\atoum\runner) {
+			$outputHandler = new outputHandler();
+			$outputHandler->handle($observable, $this->rescorer);
+		}
 	}
+
+
 }
