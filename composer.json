@@ -2,7 +2,7 @@
     "name": "atoum/deprecated-extension",
     "type": "library",
     "description": "atoum extension to avoid failures on deprecated errors",
-    "keywords": ["TDD","atoum","test","unit testing","deprecated","atoum-extension"],
+    "keywords": ["TDD", "atoum", "test", "unit testing", "deprecated", "atoum-extension"],
     "homepage": "http://www.atoum.org",
     "license": "MIT",
     "authors": [
