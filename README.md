@@ -91,6 +91,13 @@ public function testError()
 }
 ```
 
+## Links
+
+* [atoum](http://atoum.org)
+* [atoum's documentation](http://docs.atoum.org)
+
 ## License
 
 deprecated-extension is released under the MIT License. See the bundled LICENSE file for details.
+
+![atoum](http://atoum.org/images/logo/atoum.png)
