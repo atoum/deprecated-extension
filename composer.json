@@ -11,13 +11,14 @@
             "email": "adriengallou@gmail.com"
         }
     ],
-    "require-dev": {
-        "atoum/atoum": ">=1.0,<3.0"
+    "minimum-stability": "beta",
+    "require": {
+        "atoum/atoum": "^2.9"
     },
     "autoload": {
         "psr-4": {
             "mageekguy\\atoum\\deprecated\\": "classes"
         },
-        "files": ["autoloader.php"]
+        "files": ["configuration.php"]
     }
 }

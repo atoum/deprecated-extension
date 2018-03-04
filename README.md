@@ -60,18 +60,17 @@ Install extension using [composer](https://getcomposer.org):
 composer require --dev atoum/deprectated-extension
 ```
 
-Enable the extension using atoum configuration file:
+The extension will be automatically loaded. If you ever want to unload it, you can add this to your configuration file:
 
 ```php
 <?php
 
 // .atoum.php
 
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+use mageekguy\atoum\deprecated;
 
-$runner->addExtension(new \mageekguy\atoum\deprecated\extension($script));
+$runner->removeExtension(deprecated\extension::class);
 ```
-
 
 ## Other examples
 

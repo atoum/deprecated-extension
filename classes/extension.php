@@ -38,6 +38,18 @@ class extension implements atoum\extension
 
 	/**
 	 * @param runner $runner
+	 * 
+	 * @return $this
+	 */
+	public function addToRunner(runner $runner)
+	{
+		$runner->addExtension($this);
+
+		return $this;
+	}
+
+	/**
+	 * @param runner $runner
 	 *
 	 * @return $this
 	 */
