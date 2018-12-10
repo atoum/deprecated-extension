@@ -57,7 +57,7 @@ With the extention the test pass, and the deprecated call is displayed at the en
 Install extension using [composer](https://getcomposer.org):
 
 ```
-composer require --dev atoum/deprectated-extension
+composer require --dev atoum/deprecated-extension
 ```
 
 The extension will be automatically loaded. If you ever want to unload it, you can add this to your configuration file:
